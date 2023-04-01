@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>个人网站</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #f8f8f8;
+			font-family: Arial, sans-serif;
+		}
+		header {
+			background-color: #333;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+		}
+		h1 {
+			margin: 0;
+			font-size: 36px;
+			color: #FF0000;
+		}
+		nav {
+			background-color: #222;
+			color: #fff;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 10px 30px;
+		}
+		nav ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+		}
+		nav li {
+			margin: 0 10px;
+		}
+		nav a {
+			color: #fff;
+			text-decoration: none;
+			font-size: 18px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			padding: 10px 15px;
+			border-radius: 5px;
+			transition: background-color 0.3s ease;
+		}
+		nav a:hover {
+			background-color: #555;
+		}
+		.tab-content {
+			display: none;
+			padding: 50px;
+			background-color: #fff;
+			border: 1px solid #ddd;
+		}
+		.tab-content.active {
+			display: block;
+		}
+		table {
+			border-collapse: collapse;
+			width: 100%;
+			margin: 50px auto;
+		}
+		th, td {
+			padding: 10px;
+			text-align: left;
+			border: 1px solid #ddd;
+		}
+		th {
+			background-color: #222;
+			color: #fff;
+			font-weight: normal;
+		}
+		img {
+			max-width: 100%;
+			height: auto;
+			display: block;
+			margin: 0 auto;
+			padding: 50px;
+		}
+	</style>
+	<script>
+		function openTab(tabName) {
+		  var i, tabContent;
+		  tabContent = document.getElementsByClassName("tab-content");
+		  for (i = 0; i < tabContent.length; i++) {
+		    tabContent[i].style.display = "none";
+		  }
+		  document.getElementById(tabName).style.display = "block";
+		}
+	</script>
+</head>
+<body>
+	<header>
+		<h1>欢迎来到我的主页</h1>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="#" onclick="openTab('personal-info')">个人经历</a></li>
+			<li><a href="#" onclick="openTab('skills')">擅长技能</a></li>
+			<li><a href="#" onclick="openTab('contact')">联系方式</a></li>
+		</ul>
+	</nav>
+	<main>
+		<section id="personal-info" class="tab-content active">
+			<h2>个人经历</h2>
+			<p>大家好，我是李余东，我是一个拥有5年工作经验的社交产品经理，我现在对XR有很大的兴趣。</p>
+		</section>
+		<section id="skills" class="tab-content">
+			<h2>擅长技能</h2>
+			<table>
+				<tr>
+					<th>技能</th>
+					<th>熟练程度</th>
+				</tr>
+				<tr>
+					<td>代码</td>
+					<td>啥也不会</td>
+				</tr>
+				<tr>
+					<td>作图</td>
+					<td>会一点点</td>
+				</tr>
+			</table>
+		</section>
+		<section id="contact" class="tab-content">
+			<h2>联系方式</h2>
+			<p>TEL 13207543778</p>
+			<img src="https://source.unsplash.com/400x300/?vr-glasses"
